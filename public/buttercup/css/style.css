@@ -1,4 +1,25 @@
 body
 {
-    background-color: #EEEEEE;
+    box-sizing: border-box;
+    margin: 0px;
+    padding: 0px;
+}
+.header
+{
+    width: 100%;
+    min-height: 150px;
+    background-color: #FCFCFC;
+    border-bottom: 1px solid #CCCCCC;
+}
+.outerContent
+{
+    min-height: 500px;
+}
+.footer
+{
+    width: 100%;
+    min-height: 150px;
+    background-color: #FCFCFC;
+    border-top: 1px solid #CCCCCC;
+    border-bottom: 1px solid #CCCCCC;
 }

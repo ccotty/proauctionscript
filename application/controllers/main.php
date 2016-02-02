@@ -5,7 +5,7 @@ class Main extends CI_Controller {
     function __construct()
     {
         parent::__construct();    
-        $this->load->model('auction_model'); 
+        $this->load->model('frontend_model'); 
         $this->load->helper("frontend_functions");
     }
     public function index()
@@ -16,9 +16,9 @@ class Main extends CI_Controller {
         
         $this->load->view($data['theme'].'/templates/main', $data);
     }
-    public function test()
+    public function search()
     {
-        echo "Test successful";
+        echo "Search successful";
     }
     
 }

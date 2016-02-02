@@ -2,7 +2,8 @@
 
 
 ?>
-</body>
-</html>
+<footer class='footer'>
+    
+</footer>
     
 

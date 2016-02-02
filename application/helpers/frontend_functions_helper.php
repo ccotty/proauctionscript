@@ -1,30 +1,31 @@
 <?php
 defined('BASEPATH') OR exit('No direct script access allowed');
 
+// Run every time a new page is created
 function initPage($page)
 {
-           
+      
     $ci =& get_instance();
     $data = array();
     $scriptsArray = array();
     $cssArray = array();
 
     // Get the themes
-    $settings = $ci->auction_model->get_auction_settings();        
+    $settings = $ci->frontend_model->get_auction_settings();        
     if($ci->agent->mobile())
     {
-        $themeInfo = $ci->auction_model->get_theme_settings($settings->mobile_theme);
+        $themeInfo = $ci->frontend_model->get_theme_settings($settings->mobile_theme);
         $data['theme'] = $settings->mobile_theme;
 
     }
     else
     {
-        $themeInfo = $ci->auction_model->get_theme_settings($settings->theme);
+        $themeInfo = $ci->frontend_model->get_theme_settings($settings->theme);
         $data['theme'] = $settings->theme;
     }
 
     // Get basic info needed for every page         
-    $pageInfo = $ci->auction_model->get_page_info($page);
+    $pageInfo = $ci->frontend_model->get_page_info($page);
     $data['page'] = $page;
     $data['page_title'] = $pageInfo->page_title;
     $data['page_description'] = $pageInfo->page_description;        

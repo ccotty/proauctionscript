@@ -1,15 +1,12 @@
 <?php
 defined('BASEPATH') OR exit('No direct script access allowed');
 
-class Home extends CI_Controller {
+class Consignor_main extends CI_Controller {
 
     public function index()
     {
-        echo "Hi there!";
+        $this->load->model('command_model');
+        $user = $this->command_model->get_command_user(1, 2);
         //$this->load->view('welcome_message');
-    }
-    public function test()
-    {
-        echo "Test successful";
     }
 }
